@@ -5,12 +5,12 @@
 class Dbsnapper < Formula
   desc "Create sanitized development snapshots of your production databases."
   homepage "https://dbsnapper.com/"
-  version "0.11.0"
+  version "0.11.2"
   depends_on :macos
 
   on_macos do
-    url "https://github.com/dbsnapper/dbsnapper/releases/download/v0.11.0/dbsnapper_dbsnapper_0.11.0_Darwin_all.zip"
-    sha256 "bbcc914b312fa89690eee62ba33f7639d388806605f851c621b260e98bedec7e"
+    url "https://github.com/dbsnapper/dbsnapper/releases/download/v0.11.2/dbsnapper_dbsnapper_0.11.2_Darwin_all.zip"
+    sha256 "f6179ada79a9f0434d78fd1caa61789f0d2fdc2c13d2a2bbbb8c7df806e05a98"
 
     def install
       bin.install "dbsnapper"
