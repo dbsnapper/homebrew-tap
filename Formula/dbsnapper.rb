@@ -6,48 +6,12 @@ class Dbsnapper < Formula
   desc "Create sanitized development snapshots of your production databases."
   homepage "https://dbsnapper.com/"
   version "2.0.0-alpha"
+  depends_on :macos
 
-  on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/dbsnapper/dbsnapper/releases/download/v2.0.0-alpha/dbsnapper_Darwin_arm64.zip"
-      sha256 "1edce2b6a12729f6ff77fc7b041253eb43f139548fbee21d6d51b38d8ec02828"
+  url "https://github.com/dbsnapper/dbsnapper/releases/download/v2.0.0-alpha/dbsnapper_Darwin_all.zip"
+  sha256 "455ad4c2b99973772a001e264943791369a8616074a7a6cd1dccb0a169a8a854"
 
-      def install
-        bin.install "dbsnapper"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/dbsnapper/dbsnapper/releases/download/v2.0.0-alpha/dbsnapper_Darwin_x86_64.zip"
-      sha256 "313bc9532131d527f4fa9d5da9f1273d5df2f31248b060b1c142e0062087ec92"
-
-      def install
-        bin.install "dbsnapper"
-      end
-    end
-    url "https://github.com/dbsnapper/dbsnapper/releases/download/v2.0.0-alpha/dbsnapper_Darwin_all.zip"
-    sha256 "49b305a3399e9326a8925930318b2a9d5f5ea5070052535d5697693290b8b94d"
-
-    def install
-      bin.install "dbsnapper"
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dbsnapper/dbsnapper/releases/download/v2.0.0-alpha/dbsnapper_Linux_arm64.zip"
-      sha256 "9d34638f5256a9ce9fcac39ba7165602865637a14b05f13e31487c53aa8526a1"
-
-      def install
-        bin.install "dbsnapper"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/dbsnapper/dbsnapper/releases/download/v2.0.0-alpha/dbsnapper_Linux_x86_64.zip"
-      sha256 "6cf93ba762afb28d50aaba637d960fe6c9fbcc969f134d97ccd0a1dc97486431"
-
-      def install
-        bin.install "dbsnapper"
-      end
-    end
+  def install
+    bin.install "dbsnapper"
   end
 end
