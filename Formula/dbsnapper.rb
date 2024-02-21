@@ -5,11 +5,11 @@
 class Dbsnapper < Formula
   desc "Database Snapshotting, Subsetting, Sanitization, and Sharing made easy"
   homepage "https://dbsnapper.com/"
-  version "2.0.0-alpha.1"
+  version "2.0.0-alpha.2"
   depends_on :macos
 
-  url "https://github.com/dbsnapper/dbsnapper/releases/download/v2.0.0-alpha.1/dbsnapper_Darwin_all.zip"
-  sha256 "28d97fa6413923fd935de75536040b6447320026a81ead433ed539169521ba11"
+  url "https://github.com/dbsnapper/dbsnapper/releases/download/v2.0.0-alpha.2/dbsnapper_Darwin_all.zip"
+  sha256 "6bd2928da33c90d56e88165074db4d43730aeb8fe043cb4a903349f7ea276bcf"
 
   def install
     bin.install "dbsnapper"
