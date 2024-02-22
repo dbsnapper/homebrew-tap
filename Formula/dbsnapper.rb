@@ -8,10 +8,20 @@ class Dbsnapper < Formula
   version "2.0.1"
   depends_on :macos
 
-  url "https://github.com/dbsnapper/dbsnapper/releases/download/v2.0.1/dbsnapper_Darwin_all.zip"
-  sha256 "0e7c7fe2bcf5673ac743e3f802f8e695f220863e1d44371221e0190fdb616523"
+  url "https://github.com/dbsnapper/dbsnapper/releases/download/v2.0.1/dbsnapper_Darwin_x86_64.zip"
+  sha256 "0fe6cb00cbba04c30530c200d11dbb0d5d19a22c9d9c26f08bc3a45b0dcb50d7"
 
   def install
     bin.install "dbsnapper"
+  end
+
+  if Hardware::CPU.arm?
+    def caveats
+      <<~EOS
+        The darwin_arm64 architecture is not supported for the Dbsnapper
+        formula at this time. The darwin_amd64 binary may work in compatibility
+        mode, but it might not be fully supported.
+      EOS
+    end
   end
 end
