@@ -9,7 +9,7 @@ class Dbsnapper < Formula
   depends_on :macos
 
   url "https://github.com/dbsnapper/dbsnapper/releases/download/v2.7.1/dbsnapper_Darwin_all.zip"
-  sha256 "6b52443a00c5a8e4d7b1a57d4341fccb060defdab068ed87e1cab3439ed04473"
+  sha256 "7eaadafa69e13841e9f70147f0ef2c1fa142d1f4c8b29e523e4a898dd107ede3"
 
   def install
     bin.install "dbsnapper"
